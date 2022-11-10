@@ -42,11 +42,12 @@ pip install gym==0.22
 pip install gym-minigrid==1.0.0
 ```
 
+
 ### Results
 
 |    Learning Curve    |    Total reward: 0.802 <br> Total length: 11 |  Total reward: 0.604 <br> Total length: 22 |  
 |:------------:|:-------------:|:-------------:|
-| ![Image1] | ![Video1]|  ![Video2]| 
+| ![Image1] |  <video src="https://user-images.githubusercontent.com/47824890/201166814-94f135ec-2a95-4494-a8bb-3768cbca4ad1.mp4">| <video src="https://user-images.githubusercontent.com/47824890/201166854-f5e1f61c-5d9b-4265-8014-0dba8dd47692.mp4">| 
 
 
 <!----------------------------------{ Images }--------------------------------->
