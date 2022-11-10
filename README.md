@@ -1,5 +1,7 @@
 [![Badge License]][License]
 
+
+
 <div align = center>
 
 
@@ -21,8 +23,10 @@
 
 <br>
 
+
+
 ## Minigrid
-* * *
+
 <div align = left>
 
 The <a href="https://github.com/Farama-Foundation/Minigrid">Minigrid</a> library contains a collection of discrete grid-world environments to conduct research on Reinforcement Learning. To **install** the Minigrid library use `pip install minigrid`.
@@ -40,24 +44,38 @@ pip install gym-minigrid==1.0.0
 
 ### Results
 
+|    Learning Curve    |    Total reward: 0.802 <br> Total length: 11 |  Total reward: 0.604 <br> Total length: 22 |  
+|:------------:|:-------------:|:-------------:|
+| ![Image1] | ![Video1]|  ![Video2]| 
 
 
+<!----------------------------------{ Images }--------------------------------->
 
+
+[Image1]: README_Images/result-minigrid.png
+[Video1]: README_Images/minigrid.mp4
+[Video2]: README_Images/minigrid2.mp4
 <!----------------------------------------------------------------------------->
 
-[Andrea]: https://github.com/gianandry
-[Marco]: https://github.com/marco-milanesi
-[Sofia]: https://github.com/sofiatos
-[Federico]: https://github.com/fedichicco
+ [Andrea]: https://github.com/gianandry
 
-[License]: LICENSE
+ [Marco]: https://github.com/marco-milanesi
+
+ [Sofia]: https://github.com/sofiatos
+
+ [Federico]: https://github.com/fedichicco
+
+ [License]: LICENSE
 
 
 <!---------------------------------{ Badges }---------------------------------->
 
-[Badge License]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge
+ [Badge License]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge
 
-[Badge Andrea]: https://img.shields.io/badge/Andrea_Campanelli-8a61c7?style=for-the-badge
-[Badge Marco]: https://img.shields.io/badge/Marco_Milanesi-4776c1?style=for-the-badge
-[Badge Sofia]: https://img.shields.io/badge/Sofia_Toscano-2930c1?style=for-the-badge
-[Badge Federico]: https://img.shields.io/badge/Federico_Scassola-9cf?style=for-the-badge
+ [Badge Andrea]: https://img.shields.io/badge/Andrea_Campanelli-8a61c7?style=for-the-badge
+
+ [Badge Marco]: https://img.shields.io/badge/Marco_Milanesi-4776c1?style=for-the-badge
+
+ [Badge Sofia]: https://img.shields.io/badge/Sofia_Toscano-2930c1?style=for-the-badge
+
+ [Badge Federico]: https://img.shields.io/badge/Federico_Scassola-9cf?style=for-the-badge
