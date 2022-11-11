@@ -36,6 +36,8 @@
     - [1.2.1 Inverse Reinforcement Learning on Minigrid](#121-inverse-reinforcement-learning-on-minigrid)
       - [Run the project](#run-the-project)
 
+<div align = center>
+
 # 1. Minigrid
 
 <div align = left>
