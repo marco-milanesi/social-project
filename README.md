@@ -36,6 +36,7 @@
       - [Results](#results)
     - [1.2.1 Inverse Reinforcement Learning on Minigrid](#121-inverse-reinforcement-learning-on-minigrid)
       - [Run the project](#run-the-project-1)
+- [2. Tamer](#2-tamer)
 
 <div align = center>
 
@@ -80,7 +81,9 @@ However in the <a href="https://github.com/marco-milanesi/social-project/tree/ma
 3. Install the `requirements.txt` with the command `pip install -r requirements.txt`
 4. run the application with the command `python agents_window.py`
 
+<div align = center>
 
+# 2. Tamer
 
 <!----------------------------------{ Images }--------------------------------->
 
