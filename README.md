@@ -32,9 +32,10 @@
 - [1. Minigrid](#1-minigrid)
   - [1.2 Environments](#12-environments)
     - [1.2.1 Reinforcement Learning: MiniGrid with Policy Gradient](#121-reinforcement-learning-minigrid-with-policy-gradient)
+      - [Run the project](#run-the-project)
       - [Results](#results)
     - [1.2.1 Inverse Reinforcement Learning on Minigrid](#121-inverse-reinforcement-learning-on-minigrid)
-      - [Run the project](#run-the-project)
+      - [Run the project](#run-the-project-1)
 
 <div align = center>
 
@@ -51,7 +52,8 @@ The included environments can be divided in two groups. The original Minigrid en
 
 In this session, it will show the pytorch-implemented Policy Gradient in Gym-MiniGrid Environment. Through this, you will know how to implement Vanila Policy Gradient (also known as REINFORCE), and test it on open source RL environment.
 
-- **Setup:** The notebook is available <a href="https://github.com/marco-milanesi/social-project/blob/main/src/MiniGrid/Policy_Gradient_With_Gym_MiniGrid.ipynb">here</a>, as presented in the first section, the following commands to install the packages have to be run:
+#### Run the project
+The notebook is available <a href="https://github.com/marco-milanesi/social-project/blob/main/src/MiniGrid/Policy_Gradient_With_Gym_MiniGrid.ipynb">here</a>, as presented in the first section, the following commands to install the packages have to be run:
 
 ```
 pip install gym==0.22
