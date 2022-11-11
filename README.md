@@ -23,7 +23,18 @@
 
 <br>
 
+## Table of Contents
+<div align = left>
 
+- [Mini Project - Learning from Human Feedback](#mini-project---learning-from-human-feedback)
+  - [Team](#team)
+  - [Table of Contents](#table-of-contents)
+- [1. Minigrid](#1-minigrid)
+  - [1.2 Environments](#12-environments)
+    - [1.2.1 Reinforcement Learning: MiniGrid with Policy Gradient](#121-reinforcement-learning-minigrid-with-policy-gradient)
+      - [Results](#results)
+    - [1.2.1 Inverse Reinforcement Learning on Minigrid](#121-inverse-reinforcement-learning-on-minigrid)
+      - [Run the project](#run-the-project)
 
 # 1. Minigrid
 
