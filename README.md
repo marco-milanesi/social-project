@@ -56,7 +56,15 @@ Since the code is implemented in GCollab no other installations are needed.
 The aim of this project is to provide a tool to train an agent on Minigrid. The human player can make game demonstrations and then the agent is trained from these demonstrations using Inverse Reinforcement Learning techniques. The code is taken from <a href="https://github.com/francidellungo/Minigrid_HCI-project">https://github.com/francidellungo/Minigrid_HCI-project</a>
 
 #### Run the project
-1. From the
+> From the original project the `view` function in the files `./policy_nets/emb_conv1x1_mlp_policy.py` and `./policy_nets/one_hot_conv_policy.py` have been replaced with 'reshape' because of an error.
+
+However in the <a href="https://github.com/marco-milanesi/social-project/tree/main/src/MiniGrid%20IRL">folder</a> the functions have been already replaced and the code is ready to be executable. To run the code:
+
+1. go to the directory in which you have downloaded the project
+2. go inside Minigrid_HCI-project folder with the command: `cd Minigrid_HCI-project`
+3. Install the `requirements.txt` with the command `pip install -r requirements.txt`
+4. run the application with the command `python agents_window.py`
+
 
 
 <!----------------------------------{ Images }--------------------------------->
