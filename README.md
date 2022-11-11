@@ -18,36 +18,45 @@
 
 [![Badge Marco]][Marco] 
 [![Badge Andrea]][Andrea]
-[![Badge Sofia]][Sofia] 
+[![Badge Sofia]][Sofia]
 [![Badge Federico]][Federico]
 
 <br>
 
 
 
-## Minigrid
+# 1. Minigrid
 
 <div align = left>
 
 The <a href="https://github.com/Farama-Foundation/Minigrid">Minigrid</a> library contains a collection of discrete grid-world environments to conduct research on Reinforcement Learning. To **install** the Minigrid library use `pip install minigrid`.
 
-### Environments
-The included environments can be divided in two groups. The original Minigrid environments and the BabyAI environments. For this project the first one were chosen: these environments have in common a triangle-like agent with a discrete action space that has to navigate a 2D map with different obstacles (Walls, Lava, Dynamic obstacles) depending on the environment. The task to be accomplished is described by a mission string returned by the observation of the agent. 
+## 1.2 Environments
+The included environments can be divided in two groups. The original Minigrid environments and the BabyAI environments. For this project the first one were chosen: these environments have in common a triangle-like agent with a discrete action space that has to navigate a 2D map with different obstacles (Walls, Lava, Dynamic obstacles) depending on the environment. The task to be accomplished is described by a mission string returned by the observation of the agent.
 
-### Setup
-The notebook is available here, as presented in the first section, the following commands to install the packages have to be run:
+### 1.2.1 Reinforcement Learning: MiniGrid with Policy Gradient
+
+In this session, it will show the pytorch-implemented Policy Gradient in Gym-MiniGrid Environment. Through this, you will know how to implement Vanila Policy Gradient (also known as REINFORCE), and test it on open source RL environment.
+
+- **Setup:** The notebook is available <a href="https://github.com/marco-milanesi/social-project/blob/main/src/MiniGrid/Policy_Gradient_With_Gym_MiniGrid.ipynb">here</a>, as presented in the first section, the following commands to install the packages have to be run:
 
 ```
 pip install gym==0.22
 pip install gym-minigrid==1.0.0
 ```
+Since the code is implemented in GCollab no other installations are needed.
 
-
-### Results
+#### Results
 
 |    Learning Curve    |    Total reward: 0.802 <br> Total length: 11 |  Total reward: 0.604 <br> Total length: 22 |  
 |:------------:|:-------------:|:-------------:|
-| ![Image1] |  <video src="https://user-images.githubusercontent.com/47824890/201166814-94f135ec-2a95-4494-a8bb-3768cbca4ad1.mp4">| <video src="https://user-images.githubusercontent.com/47824890/201166854-f5e1f61c-5d9b-4265-8014-0dba8dd47692.mp4">| 
+| ![Image1] |  <video src="https://user-images.githubusercontent.com/47824890/201166814-94f135ec-2a95-4494-a8bb-3768cbca4ad1.mp4">| <video src="https://user-images.githubusercontent.com/47824890/201166854-f5e1f61c-5d9b-4265-8014-0dba8dd47692.mp4">|
+
+### 1.2.1 Inverse Reinforcement Learning on Minigrid
+The aim of this project is to provide a tool to train an agent on Minigrid. The human player can make game demonstrations and then the agent is trained from these demonstrations using Inverse Reinforcement Learning techniques. The code is taken from <a href="https://github.com/francidellungo/Minigrid_HCI-project">https://github.com/francidellungo/Minigrid_HCI-project</a>
+
+#### Run the project
+1. From the
 
 
 <!----------------------------------{ Images }--------------------------------->
@@ -62,7 +71,7 @@ pip install gym-minigrid==1.0.0
 
  [Marco]: https://github.com/marco-milanesi
 
- [Sofia]: https://github.com/sofiatos
+ [Sofia]: https://github.com/sofiatoss
 
  [Federico]: https://github.com/fedichicco
 
