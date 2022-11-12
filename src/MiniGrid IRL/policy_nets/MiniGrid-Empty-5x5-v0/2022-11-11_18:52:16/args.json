@@ -1,0 +1,1 @@
+{"env_name": "MiniGrid-Empty-5x5-v0", "policy": "policy_nets/emb_onehot_conv1x1_mlp_policy.py", "reward": "reward_nets/MiniGrid-Empty-5x5-v0/emb_onehot_conv1x1_mlp_reward^2022-11-11_18:52:16"}

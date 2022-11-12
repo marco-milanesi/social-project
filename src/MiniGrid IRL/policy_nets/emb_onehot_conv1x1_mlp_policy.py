@@ -32,7 +32,7 @@ class MlpPolicyNet(PolicyNet):
         self.scheduler = ReduceLROnPlateau(self.optimizer, 'max', **self.scheduler_kwargs)
 
     def forward(self, x):
-        x = x.view(-1, *self.input_shape).long()
+        x = x.reshape(-1, *self.input_shape).long()
         batch_size = len(x)
 
         # One hot encoding of each channel
@@ -42,7 +42,7 @@ class MlpPolicyNet(PolicyNet):
 
         x = torch.cat((e0, one_hot_ch1, e2), 1)
 
-        act_probs = self.affine2(F.relu(self.affine1(F.relu(self.conv(x).view(batch_size, -1)))))
+        act_probs = self.affine2(F.relu(self.affine1(F.relu(self.conv(x).reshape(batch_size, -1)))))
         return act_probs
 
 
