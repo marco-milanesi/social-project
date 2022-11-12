@@ -84,6 +84,29 @@ However in the <a href="https://github.com/marco-milanesi/social-project/tree/ma
 <div align = center>
 
 # 2. Tamer
+<div align = left>
+
+TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework for human-in-the-loop Reinforcement Learning. The code is taken from <a href="https://github.com/benibienz/TAMER">https://github.com/benibienz/TAMER</a>
+
+
+## 2.1 Run the project
+* You need python 3.7+
+* The version of gym has to be the 0.15.4, installing it running the following command `pip install gym==0.15.4`
+* numpy, sklearn, pygame and gym
+* go inside TAMER folder with the command: `cd TAMER`
+* to run the code `python run.py`
+
+## 2.2 Results
+
+| Reseults reward | Interface game |
+|:---:|:----:|
+| ![TAMER1] | ![TAMER2] |
+
+
+
+
+
+
 
 <!----------------------------------{ Images }--------------------------------->
 
@@ -91,6 +114,9 @@ However in the <a href="https://github.com/marco-milanesi/social-project/tree/ma
 [Image1]: README_Images/result-minigrid.png
 [Video1]: README_Images/minigrid.mp4
 [Video2]: README_Images/minigrid2.mp4
+
+[TAMER1]: README_Images/tamer.png
+[TAMER2]: README_Images/tamer-terminal.png
 <!----------------------------------------------------------------------------->
 
  [Andrea]: https://github.com/gianandry
