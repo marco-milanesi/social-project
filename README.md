@@ -81,6 +81,14 @@ However in the <a href="https://github.com/marco-milanesi/social-project/tree/ma
 3. Install the `requirements.txt` with the command `pip install -r requirements.txt`
 4. run the application with the command `python agents_window.py`
 
+#### Results 
+|  Total reward: 0.802 <br> Total length: 0.946 |
+|:-----------------------------------------:|
+|<video src="https://user-images.githubusercontent.com/47824890/201468083-fcd63461-97a0-40fe-a6f8-8c15f5ae7aad.mp4">|
+
+
+
+
 <div align = center>
 
 # 2. Tamer
