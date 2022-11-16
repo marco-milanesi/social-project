@@ -111,7 +111,12 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 | ![TAMER1] | ![TAMER2] |
 
 
+## Reinforcement Learning
 
+
+
+
+https://user-images.githubusercontent.com/47824890/202237521-baf47768-b0b0-4a84-b32e-7640ef1782ed.mp4
 
 
 
