@@ -138,7 +138,7 @@ if __name__ == '__main__':
 
     # Plot (matplotlib) and save rewards
     plot = True
-    save_rewards_plot = False
+    save_rewards_plot = True
 
     # Setup OpenAI Gym environment for guessing game.
     env = gym.make('MiniGrid-Empty-6x6-v0')

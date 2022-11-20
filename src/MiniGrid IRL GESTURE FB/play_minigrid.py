@@ -281,21 +281,21 @@ class Game:
         if self.num_games_ended == self.max_games:
             return
         print("\npressed " + qt_key_event.text())
-        if self.handle_special_keys and qt_key_event.key() == Qt.Key_Enter:
-            reward = take_photo_onclick()
-            if reward == "counterclockwise":
-                action = self.env.actions.left
-            elif reward == "clockwise":
-                action = self.env.actions.right
-            elif  reward == "advance":   
-                action = self.env.actions.forward  
-            elif self.handle_special_keys and qt_key_event.key() == Qt.Key_Enter:
-                action = self.env.actions.done
-            else:
-                print('non sono arrivati input')
+        #if qt_key_event.key() == Qt.Key_F or qt_key_event.key() == Qt.Key_Left:
+        reward = take_photo_onclick()
+        if reward == "counterclockwise":
+            action = self.env.actions.left
+        elif reward == "clockwise":
+            action = self.env.actions.right
+        elif  reward == "advance":
+            action = self.env.actions.forward
+        elif self.handle_special_keys and qt_key_event.key() == Qt.Key_Enter:
+            action = self.env.actions.done
         else:
-            print("\nunknown key %s" % qt_key_event.key())
-            return
+            print('non sono arrivati input')
+        #else:
+            #print("\nunknown key %s" % qt_key_event.key())
+            #return
 
         self.step(action)
 

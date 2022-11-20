@@ -7,11 +7,14 @@ from itertools import count
 from pathlib import Path
 from sys import stdout
 from csv import DictWriter
+import matplotlib.pyplot as plt
 
 import numpy as np
 from sklearn import pipeline, preprocessing
 from sklearn.kernel_approximation import RBFSampler
 from sklearn.linear_model import SGDRegressor
+
+import torch
 
 MOUNTAINCAR_ACTION_MAP = {0: 'left', 1: 'none', 2: 'right'}
 MODELS_DIR = Path(__file__).parent.joinpath('saved_models')
@@ -21,7 +24,7 @@ LOGS_DIR = Path(__file__).parent.joinpath('logs')
 class SGDFunctionApproximator:
     """ SGD function approximator with RBF preprocessing. """
     def __init__(self, env):
-        
+
         # Feature preprocessing: Normalize to zero mean and unit variance
         # We use a few samples from the observation space to do this
         observation_examples = np.array(
@@ -108,7 +111,7 @@ class Tamer:
         # calculate episodic reduction in epsilon
         self.epsilon_step = (epsilon - min_eps) / num_episodes
 
-        # reward logging
+        # d logging
         self.reward_log_columns = [
             'Episode',
             'Ep start ts',
@@ -185,9 +188,11 @@ class Tamer:
                 stdout.write('\b' * (len(str(ts)) + 1))
                 state = next_state
 
+
         # Decay epsilon
         if self.epsilon > self.min_eps:
             self.epsilon -= self.epsilon_step
+        return tot_reward
 
     async def train(self, model_file_to_save=None):
         """
@@ -198,18 +203,24 @@ class Tamer:
         # render first so that pygame display shows up on top
         self.env.render()
         disp = None
+        train_reward = []
         if self.tame:
             # only init pygame display if we're actually training tamer
             from .interface import Interface
             disp = Interface(action_map=MOUNTAINCAR_ACTION_MAP)
 
+
         for i in range(self.num_episodes):
-            self._train_episode(i, disp)
+            tot_reward = self._train_episode(i, disp)
+            train_reward.append(tot_reward)
 
         print('\nCleaning up...')
         self.env.close()
         if model_file_to_save is not None:
             self.save_model(filename=model_file_to_save)
+
+        plt.plot(range(1,len(train_reward)+1), train_reward, 'r',label='train')
+
 
     def play(self, n_episodes=1, render=False):
         """
@@ -247,6 +258,19 @@ class Tamer:
             f'episodes: {avg_reward:.2f}'
         )
         return avg_reward
+
+    def plot(self, n_episodes, n):
+        rewards = self.play(n_episodes=n_episodes)
+        #train_rewards = self.train(model_file_to_save=None)
+        #train_rewards = list(train_rewards)
+        #print(train_rewards)
+        plt.plot(range(n, n+len(rewards)), rewards, 'b',label='test')
+        plt.xlabel('episode')
+        plt.ylabel('rewards')
+        plt.legend(loc="lower right")
+        plt.grid()
+        plt.savefig('plot.pdf', format='pdf')
+        return rewards
 
     def save_model(self, filename):
         """
