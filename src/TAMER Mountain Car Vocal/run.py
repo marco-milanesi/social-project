@@ -8,7 +8,8 @@ When training, use 'W' and 'A' keys for positive and negative rewards
 import asyncio
 import gym
 from tamer.agent import Tamer
-import pygame
+import time
+time.clock= time.time
 
 async def main():
     env = gym.make('MountainCar-v0')
@@ -17,7 +18,8 @@ async def main():
     discount_factor = 1
     epsilon = 0  # vanilla Q learning actually works well with no random exploration
     min_eps = 0
-    num_episodes = 2
+    num_episodes_train = 5
+    n_episodes = 20
     tame = True  # set to false for vanilla Q learning
 
     # set a timestep for training TAMER
@@ -26,14 +28,16 @@ async def main():
     # 0.2 seconds is fast but doable
     tamer_training_timestep = 0.3
 
-
-    agent = Tamer(env, num_episodes, discount_factor, epsilon, min_eps, tame,
-                          tamer_training_timestep, model_file_to_load=None)
+    agent = Tamer(env, num_episodes_train, discount_factor, epsilon, min_eps, tame,
+                  tamer_training_timestep, model_file_to_load=None)
 
     await agent.train(model_file_to_save='autosave')
     agent.play(n_episodes=1, render=True)
-    agent.evaluate(n_episodes=30)
-
+    agent.evaluate(n_episodes)
+    agent.plot(n_episodes, num_episodes_train)
 
 if __name__ == '__main__':
     asyncio.run(main())
+
+
+

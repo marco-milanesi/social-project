@@ -1,7 +1,7 @@
 import os
 import pygame
-
-
+from tamer.vocal_command import vocal_command
+import time
 class Interface:
     """ Pygame interface for training TAMER """
 
@@ -23,18 +23,32 @@ class Interface:
         Get human input. 'W' key for positive, 'A' key for negative.
         Returns: scalar reward (1 for positive, -1 for negative)
         """
+        flag=1
         reward = 0
         area = None
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_w:
-                    area = self.screen.fill((0, 255, 0))
-                    reward = 1
-                    break
-                elif event.key == pygame.K_a:
-                    area = self.screen.fill((255, 0, 0))
-                    reward = -1
-                    break
+                    print('\n--------------- W SCHIACCIATO -----')
+                    while(flag):
+                        try:
+                            command = vocal_command()
+                        except Exception as e:
+                            print(e)
+                        if command == "yes":
+                            print("yes")
+                            flag = 0
+                            area = self.screen.fill((0, 255, 0))
+                            reward = 1
+                            command = ""
+                        elif command == "no":
+                            print("no")
+                            flag = 0
+                            area = self.screen.fill((255, 0, 0))
+                            reward = -1
+                            command=""
+
+
         pygame.display.update(area)
         return reward
 
