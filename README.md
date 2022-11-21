@@ -134,7 +134,18 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 # 3. Cartpole
 <div align = left>
 
+## 3.1 Cartpole with Reinforcement Learning DQN
+### 3.1.1 Run the project
+### 3.1.2 Results
+### 3.1.3 Code link
 
+## 3.2 Cartpole with Human in the loop Evaluative Feedback
+### 3.1.1 Run the project
+### 3.1.2 Results
+### 3.1.3 Code link
+
+
+## 3.3 Cartpole with Inverse Reinforcement learning
 
 
 
