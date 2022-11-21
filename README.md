@@ -32,22 +32,27 @@
 - [1. Minigrid](#1-minigrid)
   - [1.1 Reinforcement Learning: MiniGrid with Policy Gradient](#11-reinforcement-learning-minigrid-with-policy-gradient)
     - [1.1.1 Run the project](#111-run-the-project)
-    - [1.1.2 Results](#112-results)
-    - [1.1.3 Code link](#113-code-link)
+    - [1.1.2 Results and code link](#112-results-and-code-link)
   - [1.2 Inverse Reinforcement Learning on Minigrid](#12-inverse-reinforcement-learning-on-minigrid)
     - [1.2.1 Run the project](#121-run-the-project)
-    - [1.2.2 Results](#122-results)
-    - [1.2.3 Code link](#123-code-link)
+    - [1.2.2 Results and code link](#122-results-and-code-link)
 - [2. Mountain Car](#2-mountain-car)
   - [2.1 Mountain Car using Q-learning](#21-mountain-car-using-q-learning)
     - [2.2.1 Run the project](#221-run-the-project)
-    - [2.2.2 Results](#222-results)
-    - [2.2.3 Code link](#223-code-link)
+    - [2.2.2 Results and code link](#222-results-and-code-link)
   - [2.2 Mountain Car with Tamer](#22-mountain-car-with-tamer)
     - [2.2.1 Run the project](#221-run-the-project-1)
-    - [2.2.2 Results](#222-results-1)
-    - [2.2.3 Code link](#223-code-link-1)
+    - [2.2.2 Results and code link](#222-results-and-code-link-1)
 - [3. Cartpole](#3-cartpole)
+  - [3.1 Cartpole with Reinforcement Learning DQN](#31-cartpole-with-reinforcement-learning-dqn)
+    - [3.1.1 Run the project](#311-run-the-project)
+    - [3.1.2 Results and Code link](#312-results-and-code-link)
+  - [3.2 Cartpole with Human in the loop Evaluative Feedback](#32-cartpole-with-human-in-the-loop-evaluative-feedback)
+    - [3.2.1 Run the project](#321-run-the-project)
+    - [3.2.2 Results and Code link](#322-results-and-code-link)
+  - [3.3 Cartpole with Inverse Reinforcement learning](#33-cartpole-with-inverse-reinforcement-learning)
+    - [3.3.1 Run the project](#331-run-the-project)
+    - [3.3.2 Results and code link](#332-results-and-code-link)
 
 
 
@@ -74,13 +79,13 @@ pip install gym-minigrid==1.0.0
 ```
 Since the code is implemented in GCollab no other installations are needed.
 
-### 1.1.2 Results
+### 1.1.2 Results and code link
 
 |    Learning Curve    |    Total reward: 0.802 <br> Total length: 11 |  Total reward: 0.604 <br> Total length: 22 |  
 |:------------:|:-------------:|:-------------:|
 | ![Image1] |  <video src="https://user-images.githubusercontent.com/47824890/201166814-94f135ec-2a95-4494-a8bb-3768cbca4ad1.mp4">| <video src="https://user-images.githubusercontent.com/47824890/201166854-f5e1f61c-5d9b-4265-8014-0dba8dd47692.mp4">|
 
-### 1.1.3 Code link
+
 
 ## 1.2 Inverse Reinforcement Learning on Minigrid
 The aim of this project is to provide a tool to train an agent on Minigrid. The human player can make game demonstrations and then the agent is trained from these demonstrations using Inverse Reinforcement Learning techniques. The code is taken from <a href="https://github.com/francidellungo/Minigrid_HCI-project">https://github.com/francidellungo/Minigrid_HCI-project</a>
@@ -95,13 +100,12 @@ However in the <a href="https://github.com/marco-milanesi/social-project/tree/ma
 3. Install the `requirements.txt` with the command `pip install -r requirements.txt`
 4. run the application with the command `python agents_window.py`
 
-### 1.2.2 Results
+### 1.2.2 Results and code link
 |  Total reward: 0.946 <br> Total length: 6 |
 |:-----------------------------------------:|
 |<video src="https://user-images.githubusercontent.com/47824890/201468083-fcd63461-97a0-40fe-a6f8-8c15f5ae7aad.mp4">|
 
 
-### 1.2.3 Code link
 
 <div align = center>
 
@@ -112,8 +116,7 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 
 ## 2.1 Mountain Car using Q-learning
 ### 2.2.1 Run the project
-### 2.2.2 Results
-### 2.2.3 Code link
+### 2.2.2 Results and code link
 
 ## 2.2 Mountain Car with Tamer
 ### 2.2.1 Run the project
@@ -122,12 +125,13 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 * numpy, sklearn, pygame and gym
 * go inside TAMER folder with the command: `cd TAMER`
 * to run the code `python run.py`
-### 2.2.2 Results
+### 2.2.2 Results and code link
+
 | Reseults reward | Interface game |
 |:---:|:----:|
 | ![TAMER1] | ![TAMER2] |
 
-### 2.2.3 Code link
+
 
 <div align = center>
 
@@ -136,17 +140,16 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 
 ## 3.1 Cartpole with Reinforcement Learning DQN
 ### 3.1.1 Run the project
-### 3.1.2 Results
-### 3.1.3 Code link
+### 3.1.2 Results and Code link
+
 
 ## 3.2 Cartpole with Human in the loop Evaluative Feedback
-### 3.1.1 Run the project
-### 3.1.2 Results
-### 3.1.3 Code link
-
+### 3.2.1 Run the project
+### 3.2.2 Results and Code link
 
 ## 3.3 Cartpole with Inverse Reinforcement learning
-
+### 3.3.1 Run the project
+### 3.3.2 Results and code link
 
 
 
