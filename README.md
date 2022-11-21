@@ -68,7 +68,8 @@ The included environments can be divided in two groups. The original Minigrid en
 
 ## 1.1 Reinforcement Learning: MiniGrid with Policy Gradient
 [![Button Icon Collab]][11]
-[![Python]][12]
+
+
 
 In this session, it will show the pytorch-implemented Policy Gradient in Gym-MiniGrid Environment. Through this, you will know how to implement Vanila Policy Gradient (also known as REINFORCE), and test it on open source RL environment.
 
@@ -91,6 +92,8 @@ Since the code is implemented in GCollab no other installations are needed.
 
 
 ## 1.2 Inverse Reinforcement Learning on Minigrid
+[![Python]][12]
+
 The aim of this project is to provide a tool to train an agent on Minigrid. The human player can make game demonstrations and then the agent is trained from these demonstrations using Inverse Reinforcement Learning techniques. The code is taken from <a href="https://github.com/francidellungo/Minigrid_HCI-project">https://github.com/francidellungo/Minigrid_HCI-project</a>
 
 ### 1.2.1 Run the project
@@ -115,6 +118,8 @@ However in the <a href="https://github.com/marco-milanesi/social-project/tree/ma
 # 2. Mountain Car
 <div align = left>
 
+
+
 TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework for human-in-the-loop Reinforcement Learning. The code is taken from <a href="https://github.com/benibienz/TAMER">https://github.com/benibienz/TAMER</a>
 
 ## 2.1 Mountain Car using Q-learning
@@ -122,19 +127,25 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 ### 2.2.2 Results and code link
 
 ## 2.2 Mountain Car with Tamer
+
 ### 2.2.1 Run the project
 * You need python 3.7+
 * The version of gym has to be the 0.15.4, installing it running the following command `pip install gym==0.15.4`
 * numpy, sklearn, pygame and gym
 * go inside TAMER folder with the command: `cd TAMER`
 * to run the code `python run.py`
+
 ### 2.2.2 Results and code link
+[![Python]][22]
 
 | Reseults reward | Interface game |
 |:---:|:----:|
 | ![TAMER1] | ![TAMER2] |
 
-
+## 2.3 Mountain Car with Inverse Reinforcement learning
+### 2.3.1 Run the project
+### 2.3.2 Results and code link
+[![Button Google Collab]]
 
 <div align = center>
 
@@ -150,9 +161,7 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 ### 3.2.1 Run the project
 ### 3.2.2 Results and Code link
 
-## 3.3 Cartpole with Inverse Reinforcement learning
-### 3.3.1 Run the project
-### 3.3.2 Results and code link
+
 
 
 
@@ -195,7 +204,9 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
 
 [11]: https://github.com/marco-milanesi/social-project/blob/main/src/MiniGrid/MiniGrid%20RL/Policy_Gradient_With_Gym_MiniGrid.ipynb
 [12]: https://github.com/marco-milanesi/social-project/tree/main/src/MiniGrid/MiniGrid%20IRL
+[22]:https://github.com/marco-milanesi/social-project/tree/main/src/Mountain%20Car/TAMER%20Mountain%20Car%20Evaluative
+[23]:https://github.com/marco-milanesi/social-project/blob/main/src/Mountain%20Car/Mountain%20Car%20IRL/IRL_mountain_car.ipynb
 [Button Icon Collab]: https://img.shields.io/badge/Open_Collab_Notebook-221B1B?style=for-the-badge&logo=Google+Colab&logoColor=F9AB00
 [Button Icon Collab]: https://img.shields.io/badge/Open_Collab_Notebook-221B1B?style=for-the-badge&logo=Google+Colab&logoColor=F9AB00
 
-[Python]:(https://img.shields.io/badge/v1?style=for-the-badge&message=Open-Project&color=3776AB&logo=Python&logoColor=FFFFFF&label=)
+[Python]:https://img.shields.io/badge/Open_Python_Project-3670A0?style=for-the-badge&logo=Python&logoColor=FFDD54
