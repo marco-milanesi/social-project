@@ -67,6 +67,8 @@ The <a href="https://github.com/Farama-Foundation/Minigrid">Minigrid</a> library
 The included environments can be divided in two groups. The original Minigrid environments and the BabyAI environments. For this project the first one were chosen: these environments have in common a triangle-like agent with a discrete action space that has to navigate a 2D map with different obstacles (Walls, Lava, Dynamic obstacles) depending on the environment. The task to be accomplished is described by a mission string returned by the observation of the agent.
 
 ## 1.1 Reinforcement Learning: MiniGrid with Policy Gradient
+[![Button Icon Collab]][11]
+[![Python]][12]
 
 In this session, it will show the pytorch-implemented Policy Gradient in Gym-MiniGrid Environment. Through this, you will know how to implement Vanila Policy Gradient (also known as REINFORCE), and test it on open source RL environment.
 
@@ -80,6 +82,7 @@ pip install gym-minigrid==1.0.0
 Since the code is implemented in GCollab no other installations are needed.
 
 ### 1.1.2 Results and code link
+
 
 |    Learning Curve    |    Total reward: 0.802 <br> Total length: 11 |  Total reward: 0.604 <br> Total length: 22 |  
 |:------------:|:-------------:|:-------------:|
@@ -186,3 +189,13 @@ TAMER (Training an Agent Manually via Evaluative Reinforcement) is a framework f
  [Badge Sofia]: https://img.shields.io/badge/Sofia_Toscano-2930c1?style=for-the-badge
 
  [Badge Federico]: https://img.shields.io/badge/Federico_Scassola-9cf?style=for-the-badge
+
+
+ <!------------------------------ {Icon}-------------------------->
+
+[11]: https://github.com/marco-milanesi/social-project/blob/main/src/MiniGrid/MiniGrid%20RL/Policy_Gradient_With_Gym_MiniGrid.ipynb
+[12]: https://github.com/marco-milanesi/social-project/tree/main/src/MiniGrid/MiniGrid%20IRL
+[Button Icon Collab]: https://img.shields.io/badge/Open_Collab_Notebook-221B1B?style=for-the-badge&logo=Google+Colab&logoColor=F9AB00
+[Button Icon Collab]: https://img.shields.io/badge/Open_Collab_Notebook-221B1B?style=for-the-badge&logo=Google+Colab&logoColor=F9AB00
+
+[Python]:(https://img.shields.io/badge/v1?style=for-the-badge&message=Open-Project&color=3776AB&logo=Python&logoColor=FFFFFF&label=)
