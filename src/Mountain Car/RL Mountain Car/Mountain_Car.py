@@ -90,10 +90,10 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes):
 
     return ave_reward_list
 
-# Run Q-learning algorithm
-discount_factor = [1, 0.9, 0.8, 0.7]
+# Run Q-learning algorithm , 0.9, 0.8, 0.7
+discount_factor = [1]
 for i in discount_factor:
-    rewards = QLearning(env, 0.2, i, 0.8, 0, 10000)
+    rewards = QLearning(env, 0.2, i, 0.8, 0, 100)
 
     # Plot Rewards
     plt.plot(100*(np.arange(len(rewards)) + 1), rewards)
