@@ -9,7 +9,9 @@ import asyncio
 import gym
 from tamer.agent import Tamer
 import matplotlib.pyplot as plt
+import time
 
+time.clock = time.time
 
 async def main():
     env = gym.make('MountainCar-v0')
@@ -18,9 +20,9 @@ async def main():
     discount_factor = 1
     epsilon = 0  # vanilla Q learning actually works well with no random exploration
     min_eps = 0
-    num_episodes = 5
+    num_episodes = 2
     tame = True  # set to false for vanilla Q learning
-    n_episodes = 20
+    n_episodes = 50
     # set a timestep for training TAMER
     # the more time per step, the easier for the human
     # but the longer it takes to train (in real time)
@@ -31,7 +33,7 @@ async def main():
                   tamer_training_timestep, model_file_to_load=None)
 
     await agent.train(model_file_to_save='autosave')
-    agent.play(n_episodes=1, render=True)
+    agent.play(1, render=False)
     agent.evaluate(n_episodes)
     agent.plot(n_episodes, num_episodes)
 

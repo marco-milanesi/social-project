@@ -116,8 +116,14 @@ The Mountain Car MDP is a deterministic MDP that consists of a car placed stocha
 
 ## 2.1 Mountain Car using Q-learning
 
-### 2.2.1 Run the project
+In this project, Deep Q-Network (DQN), Dueling Double DQN (D3QN) and Dueling DQN for the Mountain Car environment are implemented. In order to describe the three algorthm Q learning need to be introduced: it is a Reinforcement learning policy that will find the next best action, given a current state. It chooses this action at random and aims to maximize the reward.
+Q-learning is a model-free, off-policy reinforcement learning that will find the best course of action, given the current state of the agent. Depending on where the agent is in the environment, it will decide the next action to be taken. The objective of the model is to find the best course of action given its current state. To do this, it may come up with rules of its own or it may operate outside the policy given to it to follow. This means that there is no actual need for a policy, hence we call it off-policy.
+The only difference between Q-learning and DQN is the agent’s brain. The agent’s brain in Q-learning is the Q-table, but in DQN the agent’s brain is a deep neural network. Double DQN uses two identical neural network models. One learns during the experience replay, just like DQN does, and the other one is a copy of the last episode of the first model. 
+The difference in Dueling DQN is in the structure of the model. The model is created in a way to output a different specific formula. 
 
+The code is taken from <a href="https://github.com/DanielPalaio/MountainCar-v0_DeepRL">https://github.com/DanielPalaio/MountainCar-v0_DeepRL</a>.
+### 2.2.1 Run the project
+In order to run the codes, you need Python 3.8 and to install the specific requirements.txt depending on the folder of the algorithm desired.
 ### 2.2.2 Results and code link
 
 ## 2.2 Mountain Car with Tamer

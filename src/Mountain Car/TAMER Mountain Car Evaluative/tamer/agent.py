@@ -8,6 +8,7 @@ from pathlib import Path
 from sys import stdout
 from csv import DictWriter
 import matplotlib.pyplot as plt
+import pickle
 
 import numpy as np
 from sklearn import pipeline, preprocessing
@@ -222,7 +223,7 @@ class Tamer:
         plt.plot(range(1,len(train_reward)+1), train_reward, 'r',label='train')
 
 
-    def play(self, n_episodes=1, render=False):
+    def play(self, n_episodes=100, render=False):
         """
         Run episodes with trained agent
         Args:
@@ -247,6 +248,16 @@ class Tamer:
             ep_rewards.append(tot_reward)
             print(f'Episode: {i + 1} Reward: {tot_reward}')
         self.env.close()
+        plt.figure()
+        plt.plot(ep_rewards)
+        plt.xlabel('episode')
+        plt.ylabel('rewards')
+        plt.legend(loc="lower right")
+        plt.grid()
+        plt.savefig('plot.pdf', format='pdf')
+        f = open('Reward_keyboard.pckl', 'wb')
+        pickle.dump(ep_rewards, f)
+        f.close()
         return ep_rewards
 
     def evaluate(self, n_episodes=100):
@@ -257,19 +268,34 @@ class Tamer:
             f'Average total episode reward over {n_episodes} '
             f'episodes: {avg_reward:.2f}'
         )
-        return avg_reward
+        #plt.plot(rewards)
+        #plt.xlabel('episode')
+        # plt.ylabel('rewards')
+        # plt.legend(loc="lower right")
+        # plt.grid()
+        # plt.savefig('plot.pdf', format='pdf')
+        # f = open('Reward_keyboard.pckl', 'wb')
+        # pickle.dump(rewards, f)
+        # f.close()
+        return rewards
+
 
     def plot(self, n_episodes, n):
+        
         rewards = self.play(n_episodes=n_episodes)
         #train_rewards = self.train(model_file_to_save=None)
         #train_rewards = list(train_rewards)
         #print(train_rewards)
         plt.plot(range(n, n+len(rewards)), rewards, 'b',label='test')
+        plt.plot(rewards)
         plt.xlabel('episode')
         plt.ylabel('rewards')
         plt.legend(loc="lower right")
         plt.grid()
         plt.savefig('plot.pdf', format='pdf')
+        f = open('Reward_keyboard.pckl', 'wb')
+        pickle.dump(rewards, f)
+        f.close()
         return rewards
 
     def save_model(self, filename):

@@ -266,6 +266,9 @@ class Tamer:
         plt.legend(loc="lower right")
         plt.grid()
         plt.savefig('plot.pdf', format='pdf')
+        f = open('Reward_gesture.pckl', 'wb')
+        pickle.dump(rewards, f)
+        f.close()
         return rewards
 
 

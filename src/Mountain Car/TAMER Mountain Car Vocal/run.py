@@ -18,8 +18,8 @@ async def main():
     discount_factor = 1
     epsilon = 0  # vanilla Q learning actually works well with no random exploration
     min_eps = 0
-    num_episodes_train = 5
-    n_episodes = 20
+    num_episodes_train = 2
+    n_episodes = 50
     tame = True  # set to false for vanilla Q learning
 
     # set a timestep for training TAMER
