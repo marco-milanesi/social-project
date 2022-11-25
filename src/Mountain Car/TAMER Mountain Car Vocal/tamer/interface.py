@@ -29,7 +29,7 @@ class Interface:
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_w:
-                    print('\n--------------- W SCHIACCIATO -----')
+                    print('\n--------------- W PRESSED -----------\n Environment stopped, am I right? [yes/no]')
                     while(flag):
                         try:
                             command = vocal_command()
